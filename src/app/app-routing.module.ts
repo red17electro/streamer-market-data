@@ -5,13 +5,15 @@ import {ManagementComponent} from "./management/management.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
     path: 'management',
-    component: ManagementComponent
-  }
+    component: ManagementComponent,
+  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
