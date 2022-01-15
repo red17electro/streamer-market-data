@@ -1,3 +1,15 @@
-<p>{{ (liveData$ | async).price }} </p>
-
-<button (click)="sendButtonClick()">Click</button>
+<h1>Streamer Market Data</h1>
+<table>
+  <tr>
+    <th>ISIN</th>
+    <th>Price</th>
+    <th>Bid</th>
+    <th>Ask</th>
+  </tr>
+  <tr *ngFor="let elem of data">
+    <td>{{ elements[elem].isin }}</td>
+    <td>{{ elements[elem].price }}</td>
+    <td>{{ elements[elem].bid }}</td>
+    <td>{{ elements[elem].ask }}</td>
+  </tr>
+</table>

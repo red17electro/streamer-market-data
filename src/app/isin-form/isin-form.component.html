@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup">
+  <input
+    #isinInput
+    list="isin-values"
+    id="isinNumber"
+    type="text"
+    name="isinNumber"
+    formControlName="isinNumber"
+    autocomplete="isinNumber"
+    [placeholder]="'Type ISIN number here'"
+  />
+  <datalist id="isin-values">
+    <option value="DE000BASF111">
+    <option value="DE000A2YN900">
+    <option value="US00724F1012">
+    <option value="US0378331005">
+    <option value="US90184L1026">
+    <option value="US36467W1099">
+    <option value="US4592001014">
+    <option value="US8336351056">
+    <option value="US0079031078">
+    <option value="US0231351067">
+  </datalist>
+  <button [disabled]="formGroup.invalid" (click)="subscribe(isinInput.value)">Subscribe</button>
+  <button [disabled]="formGroup.invalid" (click)="unsubscribe(isinInput.value)">Unsubscribe</button>
+</form>
