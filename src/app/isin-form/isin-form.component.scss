@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 }
 
 form {
@@ -9,12 +10,36 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
+}
 
+@media screen and (min-width: 601px) {
   .button-group {
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :host {
+    display: block;
+  }
+
+  .form {
+    width: 100%;
+    display: block;
+  }
+
+  .button-group {
+    min-width: 100%;
+    display: block;
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      margin: 5px 0;
+    }
   }
 }

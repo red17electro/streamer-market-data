@@ -3,15 +3,15 @@
   <tr>
     <th>ISIN</th>
     <th>Price</th>
-    <th>Bid</th>
-    <th>Ask</th>
+    <th class="mobile-hidden">Bid</th>
+    <th class="mobile-hidden">Ask</th>
     <th>Action</th>
   </tr>
   <tr *ngFor="let elem of keys">
     <td>{{ isinUpdates[elem].isin }}</td>
-    <td>{{ isinUpdates[elem].price.toFixed(3) }}</td>
-    <td>{{ isinUpdates[elem].bid.toFixed(3) }}</td>
-    <td>{{ isinUpdates[elem].ask.toFixed(3) }}</td>
+    <td id="price">{{ isinUpdates[elem].price.toFixed(3) }}</td>
+    <td class="mobile-hidden">{{ isinUpdates[elem].bid.toFixed(3) }}</td>
+    <td class="mobile-hidden">{{ isinUpdates[elem].ask.toFixed(3) }}</td>
     <td>
       <button (click)="subscribeToISIN(isinUpdates[elem].isin)">Start tracking</button>
       <button (click)="unsubscribeFromISIN(isinUpdates[elem].isin)">Stop tracking</button>

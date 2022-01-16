@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   get isEmptyList() {
-    return Object.keys(this.isinUpdates).length === 0;;
+    return Object.keys(this.isinUpdates).length === 0;
   }
 
   get keys(): string[] {
