@@ -5,11 +5,19 @@ table {
 }
 
 td, th {
-  border: 1px solid var(--tr-color-non-dynamic-black);
+  border: 2px solid var(--tr-color-non-dynamic-black);
   padding: 8px;
   text-align: center;
+
+  button {
+    margin: 4px;
+  }
 }
 
 tr:nth-child(even) {
   background-color: var(--tr-color-background3);
+}
+
+p {
+  text-align: center;
 }

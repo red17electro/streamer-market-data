@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
   constructor(private isinService: IsinService) {
   }
 
+  get isEmptyList() {
+    return Object.keys(this.elements).length === 0;
+  }
+
   get data(): string[] {
     return Object.keys(this.elements)
   }
@@ -24,5 +28,13 @@ export class HomeComponent implements OnInit {
     this.liveData$.subscribe((isinElement: ISIN) => {
       this.elements[isinElement.isin] = isinElement;
     });
+  }
+
+  subscribeToISIN(isinValue: string) {
+    this.isinService.sendMessage({"subscribe": isinValue});
+  }
+
+  unsubscribeFromISIN(isinValue: string) {
+    this.isinService.sendMessage({"unsubscribe": isinValue});
   }
 }

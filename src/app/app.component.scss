@@ -8,16 +8,24 @@ header {
   gap: 10px;
   padding: 0 20px;
 
-  a {
+  a:link {
     color: #F8FAFD8E;
+    background-color: transparent;
     text-decoration: none;
-  }
-
-  a.active {
-    color: #fff;
   }
 
   a:visited {
     color: #fff;
+    background-color: transparent;
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  a.active, a:active {
+    color: #fff;
+    background-color: transparent;
   }
 }

@@ -2,12 +2,46 @@
 @import "~normalize.css/normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   text-align: center;
+}
+
+input {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+button {
+  background-color: var(--tr-color-non-dynamic-black);
+  border: 1px solid var(--tr-color-non-dynamic-black);
+  color: var(--tr-color-non-dynamic-white);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: var(--tr-color-foreground1);
+  border: 1px solid var(--tr-color-foreground1);
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--tr-color-non-dynamic-white);
+  color: var(--tr-color-non-dynamic-black);
 }
 
 :root {
