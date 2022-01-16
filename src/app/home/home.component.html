@@ -7,17 +7,18 @@
     <th>Ask</th>
     <th>Action</th>
   </tr>
-  <tr *ngFor="let elem of data">
-    <td>{{ elements[elem].isin }}</td>
-    <td>{{ elements[elem].price }}</td>
-    <td>{{ elements[elem].bid }}</td>
-    <td>{{ elements[elem].ask }}</td>
+  <tr *ngFor="let elem of keys">
+    <td>{{ isinUpdates[elem].isin }}</td>
+    <td>{{ isinUpdates[elem].price.toFixed(3) }}</td>
+    <td>{{ isinUpdates[elem].bid.toFixed(3) }}</td>
+    <td>{{ isinUpdates[elem].ask.toFixed(3) }}</td>
     <td>
-      <button (click)="subscribeToISIN(elements[elem].isin)">Start tracking</button>
-      <button (click)="unsubscribeFromISIN(elements[elem].isin)">Stop tracking</button>
+      <button (click)="subscribeToISIN(isinUpdates[elem].isin)">Start tracking</button>
+      <button (click)="unsubscribeFromISIN(isinUpdates[elem].isin)">Stop tracking</button>
     </td>
   </tr>
 </table>
 <ng-template #emptyList>
   <p>No content to display. Please, <a routerLink="/management">subscribe</a> to one or more ISINs. </p>
 </ng-template>
+<button *ngIf="localDataExists()" (click)="clearLocalData()">Clear locally stored data</button>

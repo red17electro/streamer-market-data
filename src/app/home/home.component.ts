@@ -8,22 +8,41 @@ import {ISIN} from "../models/isin.model";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  elements: { [x: string]: ISIN; } = {};
+  isinUpdates: { [x: string]: ISIN; } = {};
 
   constructor(private isinService: IsinService) {
   }
 
   get isEmptyList() {
-    return Object.keys(this.elements).length === 0;
+    return Object.keys(this.isinUpdates).length === 0;;
   }
 
-  get data(): string[] {
-    return Object.keys(this.elements)
+  get keys(): string[] {
+    return Object.keys(this.isinUpdates)
+  }
+
+  getFromLocalStorage() {
+    const local = localStorage.getItem('isinUpdates');
+    return local ? JSON.parse(local) : {};
+  }
+
+  localDataExists() {
+    return !!localStorage.getItem('isinUpdates');
+  }
+
+  saveToLocalStorage() {
+    localStorage.setItem('isinUpdates', JSON.stringify(this.isinUpdates));
+  }
+
+  removeFromLocalStorage(){
+    localStorage.removeItem('isinUpdates');
   }
 
   ngOnInit(): void {
+    this.isinUpdates = this.getFromLocalStorage();
     this.isinService.messages.subscribe((isinElement: ISIN) => {
-      this.elements[isinElement.isin] = isinElement;
+      this.isinUpdates[isinElement.isin] = isinElement;
+      this.saveToLocalStorage()
     }, error => {
       console.log(error);
     }, () => {
@@ -37,5 +56,10 @@ export class HomeComponent implements OnInit {
 
   unsubscribeFromISIN(isinValue: string) {
     this.isinService.sendMessage({"unsubscribe": isinValue});
+  }
+
+  clearLocalData() {
+    this.removeFromLocalStorage();
+    this.isinUpdates = {};
   }
 }

@@ -1,7 +1,14 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  padding: 20px;
 }
 
 td, th {
@@ -20,4 +27,8 @@ tr:nth-child(even) {
 
 p {
   text-align: center;
+}
+
+button {
+  margin: 20px 0;
 }
