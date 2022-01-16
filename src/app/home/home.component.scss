@@ -1,3 +1,15 @@
-h1 {
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid var(--tr-color-non-dynamic-black);
+  padding: 8px;
   text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: var(--tr-color-background3);
 }

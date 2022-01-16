@@ -5,3 +5,124 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+  text-align: center;
+}
+
+:root {
+  --tr-color-transparent: transparent;
+  --tr-color-non-dynamic-white: #fff;
+  --tr-color-non-dynamic-black: #000;
+  --tr-color-shadow1: rgba(0,0,0,0.1);
+  --tr-color-shadow2: rgba(0,0,0,0.2);
+  --tr-color-shadow3: rgba(0,0,0,0.5);
+  --tr-color-stocks-blue1: #2763ff;
+  --tr-color-background1: #fff;
+  --tr-color-background2: rgba(38,49,60,0.05);
+  --tr-color-background3: rgba(38,49,60,0.08);
+  --tr-color-background4: rgba(38,49,60,0.15);
+  --tr-color-background5: rgba(38,49,60,0.22);
+  --tr-color-background-alternate: #fff;
+  --tr-color-background-elevated: #fff;
+  --tr-color-luminance1: var(--tr-color-background1);
+  --tr-color-luminance2: var(--tr-color-background1);
+  --tr-color-foreground1: rgba(38,49,60,0.4);
+  --tr-color-foreground2: rgba(38,49,60,0.48);
+  --tr-color-foreground3: #000;
+  --tr-color-primary1: rgba(0,133,255,0.5);
+  --tr-color-primary2: rgba(0,133,255,0.8);
+  --tr-color-primary3: rgba(0,133,255,0.85);
+  --tr-color-primary4: rgba(0,133,255,0.9);
+  --tr-color-secondary1: rgba(0,133,255,0.12);
+  --tr-color-secondary2: rgba(0,133,255,0.28);
+  --tr-color-secondary3: rgba(0,133,255,0.36);
+  --tr-color-primary1-positive: rgba(0,203,57,0.5);
+  --tr-color-primary2-positive: rgba(0,203,57,0.8);
+  --tr-color-primary3-positive: rgba(0,203,57,0.85);
+  --tr-color-primary4-positive: rgba(0,203,57,0.9);
+  --tr-color-secondary1-positive: rgba(0,203,57,0.12);
+  --tr-color-secondary2-positive: rgba(0,203,57,0.28);
+  --tr-color-secondary3-positive: rgba(0,203,57,0.36);
+  --tr-color-primary1-negative: rgba(229,34,12,0.5);
+  --tr-color-primary2-negative: rgba(229,34,12,0.8);
+  --tr-color-primary3-negative: rgba(229,34,12,0.85);
+  --tr-color-primary4-negative: rgba(229,34,12,0.9);
+  --tr-color-secondary1-negative: rgba(229,34,12,0.12);
+  --tr-color-secondary2-negative: rgba(229,34,12,0.28);
+  --tr-color-secondary3-negative: rgba(229,34,12,0.36);
+  --tr-color-primary1-warning: rgba(238,138,20,0.5);
+  --tr-color-primary2-warning: rgba(238,138,20,0.8);
+  --tr-color-primary3-warning: rgba(238,138,20,0.85);
+  --tr-color-primary4-warning: rgba(238,138,20,0.9);
+  --tr-color-secondary1-warning: rgba(238,138,20,0.12);
+  --tr-color-secondary2-warning: rgba(238,138,20,0.28);
+  --tr-color-secondary3-warning: rgba(238,138,20,0.36);
+  --tr-color-solid-foreground-positive: #33d560;
+  --tr-color-solid-background-positive: #e0f8e7;
+  --tr-color-solid-foreground-negative: #ea4e3d;
+  --tr-color-solid-background-negative: #fbe4e1;
+  --tr-color-overlay-barrier1: rgba(0,0,0,0.3);
+  --tr-color-overlay-barrier2: hsla(0,0%,100%,0.7);
+  --tr-color-overlay-barrier3: rgba(0,0,0,0.3);
+  --tr-box-shadow-card-content: 0 2px 8px 0 rgba(0,0,0,0.1);
+  --tr-box-shadow-sidebar-card: 0 2px 10px 0 rgba(0,0,0,0.07);
+  --tr-box-shadow-sidebar-card-emphasized: 0 4px 34px 0 rgba(0,0,0,0.05);
+  --tr-box-shadow-dropdown: 0 4px 40px 0 rgba(0,0,0,0.05);
+  --tr-box-shadow-side-modal: -4px 0 20px rgba(0,0,0,0.05)
+}
+
+:root[data-appearance=Dark] {
+  --tr-color-background1: #000;
+  --tr-color-background2: rgba(248,250,253,0.1);
+  --tr-color-background3: rgba(248,250,253,0.2);
+  --tr-color-background4: rgba(248,250,253,0.28);
+  --tr-color-background5: rgba(248,250,253,0.36);
+  --tr-color-background-alternate: #121212;
+  --tr-color-background-elevated: #1c1c1e;
+  --tr-color-luminance1: #2e2e2e;
+  --tr-color-luminance2: #333;
+  --tr-color-foreground1: rgba(248,250,253,0.48);
+  --tr-color-foreground2: rgba(248,250,253,0.56);
+  --tr-color-foreground3: #fff;
+  --tr-color-primary1: rgba(27,164,255,0.5);
+  --tr-color-primary2: rgba(27,164,255,0.8);
+  --tr-color-primary3: rgba(27,164,255,0.85);
+  --tr-color-primary4: rgba(27,164,255,0.9);
+  --tr-color-secondary1: rgba(27,164,255,0.3);
+  --tr-color-secondary2: rgba(27,164,255,0.35);
+  --tr-color-secondary3: rgba(27,164,255,0.4);
+  --tr-color-primary1-positive: rgba(19,255,128,0.5);
+  --tr-color-primary2-positive: rgba(19,255,128,0.8);
+  --tr-color-primary3-positive: rgba(19,255,128,0.85);
+  --tr-color-primary4-positive: rgba(19,255,128,0.9);
+  --tr-color-secondary1-positive: rgba(19,255,128,0.2);
+  --tr-color-secondary2-positive: rgba(19,255,128,0.28);
+  --tr-color-secondary3-positive: rgba(19,255,128,0.36);
+  --tr-color-primary1-negative: rgba(255,78,78,0.5);
+  --tr-color-primary2-negative: rgba(255,78,78,0.8);
+  --tr-color-primary3-negative: rgba(255,78,78,0.85);
+  --tr-color-primary4-negative: rgba(255,78,78,0.9);
+  --tr-color-secondary1-negative: rgba(255,78,78,0.2);
+  --tr-color-secondary2-negative: rgba(255,78,78,0.28);
+  --tr-color-secondary3-negative: rgba(255,78,78,0.36);
+  --tr-color-primary1-warning: rgba(255,177,24,0.5);
+  --tr-color-primary2-warning: rgba(255,177,24,0.8);
+  --tr-color-primary3-warning: rgba(255,177,24,0.85);
+  --tr-color-primary4-warning: rgba(255,177,24,0.9);
+  --tr-color-secondary1-warning: rgba(255,177,24,0.2);
+  --tr-color-secondary2-warning: rgba(255,177,24,0.28);
+  --tr-color-secondary3-warning: rgba(255,177,24,0.36);
+  --tr-color-solid-foreground-positive: #13d06a;
+  --tr-color-solid-background-positive: #124128;
+  --tr-color-solid-foreground-negative: #d04242;
+  --tr-color-solid-background-negative: #411e1e;
+  --tr-color-overlay-barrier1: rgba(0,0,0,0.5);
+  --tr-color-overlay-barrier2: rgba(18,18,18,0.7);
+  --tr-color-overlay-barrier3: rgba(0,0,0,0.5);
+  --tr-box-shadow-card-content: 0 2px 8px 0 rgba(0,0,0,0.2);
+  --tr-box-shadow-sidebar-card: 0 2px 10px 0 rgba(0,0,0,0.4);
+  --tr-box-shadow-sidebar-card-emphasized: 0 4px 34px 0 rgba(0,0,0,0.1);
+  --tr-box-shadow-dropdown: 0 4px 20px 0 rgba(0,0,0,0.35);
+  --tr-box-shadow-side-modal: -4px 0 20px rgba(0,0,0,0.4)
+}

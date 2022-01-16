@@ -22,9 +22,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.liveData$ = this.isinService.webSocket;
     this.liveData$.subscribe((isinElement: ISIN) => {
-      debugger;
       this.elements[isinElement.isin] = isinElement;
-      console.log(isinElement);
     });
   }
 }

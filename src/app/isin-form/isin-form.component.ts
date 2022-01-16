@@ -25,9 +25,11 @@ export class IsinFormComponent implements OnInit {
 
   subscribe(isinValue: string) {
     this.isinService.sendMessage({"subscribe": isinValue});
+    this.formGroup.reset();
   }
 
   unsubscribe(isinValue: string) {
     this.isinService.sendMessage({"unsubscribe": isinValue});
+    this.formGroup.reset();
   }
 }

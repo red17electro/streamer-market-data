@@ -21,6 +21,8 @@
     <option value="US0079031078">
     <option value="US0231351067">
   </datalist>
-  <button [disabled]="formGroup.invalid" (click)="subscribe(isinInput.value)">Subscribe</button>
-  <button [disabled]="formGroup.invalid" (click)="unsubscribe(isinInput.value)">Unsubscribe</button>
+  <div class="button-group">
+    <button [disabled]="formGroup.invalid" (click)="subscribe(isinInput.value)">Subscribe</button>
+    <button [disabled]="formGroup.invalid" (click)="unsubscribe(isinInput.value)">Unsubscribe</button>
+  </div>
 </form>
