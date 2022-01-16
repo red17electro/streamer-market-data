@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {IsinService} from "../isin.service";
-import {Observable} from "rxjs";
 import {ISIN} from "../models/isin.model";
 
 @Component({
@@ -10,7 +9,6 @@ import {ISIN} from "../models/isin.model";
 })
 export class HomeComponent implements OnInit {
   elements: { [x: string]: ISIN; } = {};
-  liveData$: Observable<any> | undefined;
 
   constructor(private isinService: IsinService) {
   }
@@ -24,9 +22,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.liveData$ = this.isinService.webSocket;
-    this.liveData$.subscribe((isinElement: ISIN) => {
+    this.isinService.messages.subscribe((isinElement: ISIN) => {
       this.elements[isinElement.isin] = isinElement;
+    }, error => {
+      console.log(error);
+    }, () => {
+      console.log('Complete!');
     });
   }
 
